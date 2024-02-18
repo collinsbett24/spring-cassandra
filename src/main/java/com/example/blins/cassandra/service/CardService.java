@@ -1,13 +1,14 @@
 package com.example.blins.cassandra.service;
 
 import com.example.blins.cassandra.PDOs.CardPojo;
-import org.springframework.stereotype.Service;
+import com.example.blins.cassandra.entity.Cards;
+import reactor.core.publisher.Flux;
 
 
 public interface CardService {
-    public String addCard(CardPojo request);
+    Cards addCard(Cards request);
 
     CardPojo getAllCards();
 
-    CardPojo getCard(Long account);
+    Flux<Cards> getCard(Long account);
 }

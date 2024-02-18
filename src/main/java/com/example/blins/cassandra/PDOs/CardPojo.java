@@ -1,12 +1,9 @@
 package com.example.blins.cassandra.PDOs;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Data
-@RequiredArgsConstructor
-@NoArgsConstructor
+@Builder
 public class CardPojo {
     int accountNumber;
     private String name;
